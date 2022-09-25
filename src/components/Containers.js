@@ -32,7 +32,7 @@ function Containers() {
         const fetchData = async () => {
             setLoading(true);
             try {
-                const { data: response } = await axios.get('http://localhost:9000/containers/all');
+                const { data: response } = await axios.get('http://post-container-service-post-container-service.apps-crc.testing/containers/all');
                 setData(response);
                 console.log(response);
                 console.log(data);
