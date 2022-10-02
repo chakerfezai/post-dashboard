@@ -11,19 +11,6 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 
 
-function createData(name, calories, fat, carbs, protein) {
-    return { name, calories, fat, carbs, protein };
-}
-
-const rows = [
-    createData('Frozen yoghurt', 159, 6.0, 24, 4.0),
-    createData('Ice cream sandwich', 237, 9.0, 37, 4.3),
-    createData('Eclair', 262, 16.0, 24, 6.0),
-];
-
-
-
-
 function Containers() {
 
     const[loading, setLoading] = useState(true);
@@ -32,10 +19,9 @@ function Containers() {
         const fetchData = async () => {
             setLoading(true);
             try {
-                const { data: response } = await axios.get('http://post-container-service-post-container-service.apps-crc.testing/containers/all');
+                //const { data: response } = await axios.get('http://post-container-service-post-container-service.apps-crc.testing/containers/all');
+                const { data: response } = await axios.get('http://localhost:9000/containers/all');
                 setData(response);
-                console.log(response);
-                console.log(data);
             } catch (error) {
                 console.error(error.message);
             }

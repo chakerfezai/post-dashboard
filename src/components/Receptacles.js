@@ -1,12 +1,20 @@
-import React from 'react';
+
 import PostForm from './PostForm';
 
 
 
-function Receptacle() {
 
+
+function Receptacle() {
+    
     return (
-       <PostForm></PostForm>
+        <>
+            <PostForm></PostForm>
+
+           
+        </>
+       
+       
     );
 
 }
